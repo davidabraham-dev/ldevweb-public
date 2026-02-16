@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" aria-labelledby="logoTitle logoDesc" shape-rendering="geometricPrecision" viewBox="0 0 1200 1200">
+  <title id="logoTitle">lawdev.ai logo – light</title>
+  <desc id="logoDesc">Geometric lawdev mark with realistic 3D depth, directional lighting and surface detail — light variant.</desc>
+  <defs>
+    <!-- Top crown: brightest face — cool white with subtle blue tint -->
+    <linearGradient id="gTop" x1="12%" x2="88%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="18%" stop-color="#e8ecf4"/>
+      <stop offset="50%" stop-color="#d8dde8"/>
+      <stop offset="80%" stop-color="#e4e8f2"/>
+      <stop offset="100%" stop-color="#d0d6e2"/>
+    </linearGradient>
+    <!-- Left section: medium brightness — warm grey -->
+    <linearGradient id="gLeft" x1="5%" x2="95%" y1="12%" y2="88%">
+      <stop offset="0%" stop-color="#d8dce6"/>
+      <stop offset="25%" stop-color="#c8cdd8"/>
+      <stop offset="55%" stop-color="#b8bfce"/>
+      <stop offset="100%" stop-color="#a8b0c2"/>
+    </linearGradient>
+    <!-- Right section: shadow side — cool medium grey -->
+    <linearGradient id="gRight" x1="88%" x2="12%" y1="8%" y2="92%">
+      <stop offset="0%" stop-color="#c0c6d4"/>
+      <stop offset="30%" stop-color="#aeb6c8"/>
+      <stop offset="65%" stop-color="#9aa4b8"/>
+      <stop offset="100%" stop-color="#8892a8"/>
+    </linearGradient>
+    <!-- Rim-light edge — soft blue-grey -->
+    <linearGradient id="gEdge" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8c2d4"/>
+      <stop offset="40%" stop-color="#8894ac"/>
+      <stop offset="100%" stop-color="#687490"/>
+    </linearGradient>
+    <!-- Scan line sweep -->
+    <linearGradient id="gScan" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#6080c0" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#6080c0" stop-opacity="0"/>
+      <stop offset="47%" stop-color="#4070b8" stop-opacity=".5"/>
+      <stop offset="50%" stop-color="#2060b0" stop-opacity=".7"/>
+      <stop offset="53%" stop-color="#4070b8" stop-opacity=".5"/>
+      <stop offset="60%" stop-color="#6080c0" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6080c0" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Radial specular catch-light (subtle) -->
+    <radialGradient id="gSpec" cx="22%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset="20%" stop-color="#f0f4ff" stop-opacity=".14"/>
+      <stop offset="50%" stop-color="#d8e0f0" stop-opacity=".05"/>
+      <stop offset="100%" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow: lighter, cooler -->
+    <filter id="fShadow" width="180%" height="175%" x="-40%" y="-30%">
+      <feDropShadow dx="0" dy="14" flood-color="#8090a8" flood-opacity=".18" stdDeviation="24"/>
+      <feDropShadow dx="4" dy="8" flood-color="#8090a8" flood-opacity=".12" stdDeviation="10"/>
+      <feDropShadow dx="1" dy="3" flood-color="#8090a8" flood-opacity=".10" stdDeviation="3"/>
+    </filter>
+    <!-- Ambient glow: blue tint -->
+    <filter id="fGlow" width="144%" height="144%" x="-22%" y="-22%">
+      <feDropShadow dx="0" dy="0" flood-color="#98a8c0" flood-opacity=".05" stdDeviation="10"/>
+      <feDropShadow dx="0" dy="0" flood-color="#b0bcd0" flood-opacity=".08" stdDeviation="3.5"/>
+    </filter>
+    <!-- Specular lighting -->
+    <filter id="fSpecular" width="116%" height="116%" x="-8%" y="-8%">
+      <feGaussianBlur in="SourceAlpha" result="bevel" stdDeviation="4"/>
+      <feSpecularLighting in="bevel" lighting-color="#ffffff" result="spec" specularConstant=".9" specularExponent="36" surfaceScale="4.5">
+        <feDistantLight azimuth="225" elevation="55"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in"/>
+    </filter>
+    <!-- Surface micro-texture -->
+    <filter id="fGrain" width="100%" height="100%" x="0%" y="0%">
+      <feTurbulence baseFrequency="1.1" numOctaves="3" result="noise" seed="42" type="fractalNoise"/>
+      <feColorMatrix in="noise" result="mono" type="saturate" values="0"/>
+      <feComponentTransfer in="mono" result="faint">
+        <feFuncA slope=".05" type="linear"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="overlay"/>
+    </filter>
+    <!-- Pulse trail gradient (blue matching LIGHT_PALETTE) -->
+    <linearGradient id="gPulse" gradientUnits="userSpaceOnUse" x1="-1614" x2="-32" y1="2600" y2="2600">
+      <stop offset="0%" stop-color="#005ce6" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#0084ff" stop-opacity=".45"/>
+      <stop offset="82%" stop-color="#2abaff" stop-opacity=".75"/>
+      <stop offset="100%" stop-color="#76e8ff"/>
+    </linearGradient>
+    <!-- Reusable combined shape (all 3 faces) -->
+    <path id="shape" d="M-1613.8 3004.3v-240.5l756.63 343.58v-68.72l-756.63-343.58v-206.15l275.14-160.13V2592l515.88 240.5v-446.64l412.7 206.14v584.08l-412.7 189.54Zm1272.5 103.08v-549.73l-481.48-240.5-344.76 190.42v-327.86l310.37-171.79 807.44 446.66v515.37ZM-1613.8 2111l791.02-446.65L-31.76 2111v274.86l-791.02-446.65-791.02 446.65Z"/>
+  </defs>
+  <style>
+    @keyframes edgePulse{0%,to{opacity:.12}50%{opacity:.38}}@keyframes scanSweep{0%{stroke-dashoffset:0;opacity:0}12%,72%{opacity:.6}to{stroke-dashoffset:-2370;opacity:0}}@keyframes pTrail{0%{stroke-dashoffset:0;opacity:0}5%{opacity:1}90%{opacity:1}to{stroke-dashoffset:-14252;opacity:0}}.edge-rim,.scan-sweep{fill:none;stroke:url(#gEdge);stroke-width:5;stroke-linejoin:round;stroke-linecap:round;opacity:.28;animation:edgePulse 5.5s ease-in-out infinite;will-change:opacity;transform:translateZ(0)}.scan-sweep{stroke:url(#gScan);stroke-width:11;stroke-dasharray:170 2200;stroke-dashoffset:0;opacity:.5;animation:scanSweep 6.3s linear infinite;will-change:opacity,stroke-dashoffset}.pulse-trail{fill:none;stroke:url(#gPulse);stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80 14172;opacity:0;animation:pTrail 9s linear infinite;will-change:stroke-dashoffset,opacity}.pulse-trail.p2{stroke-dasharray:50 14202;animation-duration:12s;animation-delay:-4s}.pulse-trail.p3{stroke-dasharray:65 14187;animation-duration:10.5s;animation-delay:-7s;animation-direction:reverse}.pulse-comet{fill:none;stroke:url(#gPulse);stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke-dasharray:140 14112;opacity:0;animation:pTrail 5.8s linear infinite;animation-delay:-2s;will-change:stroke-dashoffset,opacity}.spec-overlay{mix-blend-mode:screen;opacity:.25}.grain-overlay{opacity:.35}@media (prefers-reduced-motion:reduce){.edge-rim,.scan-sweep,.pulse-trail,.pulse-comet{animation:none;will-change:auto}}
+  </style>
+  <!-- Layer 0: Soft shadow -->
+  <g filter="url(#fShadow)" transform="translate(2386.33 3194.27)">
+    <path fill="#98a2b4" d="M-2338.33-2252.47v-168l528 240v-48l-528-240v-144l192-111.86v183.86l360 168v-312l288 144v408l-288 132.4Zm888 72v-384l-336-168-240.58 133.02v-229.02l216.58-120 563.47 312v360Zm-888-696 552-312 552 312v192l-552-312-552 312Z" opacity=".5"/>
+  </g>
+  <!-- Layer 1: Face fills (separate paths for directional lighting) -->
+  <g filter="url(#fGlow)" transform="translate(2386.33 3194.27)">
+    <path fill="url(#gLeft)" d="M-1613.8 3004.3v-240.5l756.63 343.58v-68.72l-756.63-343.58v-206.15l275.14-160.13V2592l515.88 240.5v-446.64l412.7 206.14v584.08l-412.7 189.54Z" transform="matrix(.69784 0 0 .69853 -1212.16 -4351.06)"/>
+    <path fill="url(#gRight)" d="M-341.3 3107.38v-549.73l-481.48-240.5-344.76 190.42v-327.86l310.37-171.79 807.44 446.66v515.37Z" transform="matrix(.69784 0 0 .69853 -1212.16 -4351.06)"/>
+    <path fill="url(#gTop)" d="m-1613.8 2111 791.02-446.65L-31.76 2111v274.86l-791.02-446.65-791.02 446.65Z" transform="matrix(.69784 0 0 .69853 -1212.16 -4351.06)"/>
+  </g>
+  <!-- Layers 2–6: use shared #shape with per-layer styling -->
+  <use href="#shape" fill="#c8cdd8" class="spec-overlay" filter="url(#fSpecular)" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" fill="url(#gSpec)" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" fill="url(#gLeft)" class="grain-overlay" filter="url(#fGrain)" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <!-- Pulse trails (animated edge pulses) -->
+  <use href="#shape" class="pulse-trail" stroke-width="3" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" class="pulse-trail p2" stroke-width="2.5" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" class="pulse-trail p3" stroke-width="2" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" class="pulse-comet" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" class="edge-rim" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+  <use href="#shape" class="scan-sweep" transform="matrix(.69784 0 0 .69853 1174.17 -1156.8)"/>
+</svg>
