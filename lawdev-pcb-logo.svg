@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1200"
+   height="1200"
+   viewBox="0 0 1200 1200"
+   xmlns="http://www.w3.org/2000/svg"
+   role="img"
+   aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">lawdev.ai logo</title>
+  <desc id="logoDesc">Geometric lawdev mark with subtle premium scan and pulse effects.</desc>
+  <defs>
+    <linearGradient id="logoFill" x1="10%" y1="8%" x2="89%" y2="92%">
+      <stop offset="0%" stop-color="#0f1013"/>
+      <stop offset="52%" stop-color="#272a30"/>
+      <stop offset="100%" stop-color="#14161b"/>
+    </linearGradient>
+    <linearGradient id="scanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff00"/>
+      <stop offset="45%" stop-color="#ffffff00"/>
+      <stop offset="52%" stop-color="#f4f7ff"/>
+      <stop offset="59%" stop-color="#ffffff00"/>
+      <stop offset="100%" stop-color="#ffffff00"/>
+    </linearGradient>
+    <filter id="logoGlow" x="-22%" y="-22%" width="144%" height="144%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#aab6d2" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <style>
+    .logo-main {
+      fill: url(#logoFill);
+      filter: url(#logoGlow);
+    }
+    .logo-edge {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.35);
+      stroke-width: 8;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      opacity: 0.56;
+      animation: edgePulse 5.5s ease-in-out infinite;
+    }
+    .logo-scan {
+      fill: none;
+      stroke: url(#scanLine);
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 170 2200;
+      stroke-dashoffset: 0;
+      opacity: 0.74;
+      animation: scanSweep 6.3s linear infinite;
+    }
+    @keyframes edgePulse {
+      0%, 100% { opacity: 0.24; }
+      50% { opacity: 0.74; }
+    }
+    @keyframes scanSweep {
+      0% { stroke-dashoffset: 0; opacity: 0; }
+      12% { opacity: 0.94; }
+      72% { opacity: 0.94; }
+      100% { stroke-dashoffset: -2370; opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .logo-edge,
+      .logo-scan {
+        animation: none;
+      }
+    }
+  </style>
+  <g transform="translate(2386.3301,3194.271)">
+    <g class="logo-motion">
+      <path
+        class="logo-main"
+        transform="matrix(0.69783509,0,0,0.69852944,-1212.1645,-4351.0636)"
+        d="m -1613.799,3004.3031 v -240.5053 l 756.62568,343.579 V 3038.661 L -1613.799,2695.082 v -206.1473 l 275.1367,-160.1366 v 263.2103 l 515.88108,240.5052 V 2385.861 l 412.70489,206.1474 v 584.0841 l -412.70489,189.5368 z m 1272.50687,103.0737 v -549.7263 l -481.48909,-240.5053 -344.75668,190.4254 0.836,-327.857 309.52858,-171.7894 807.447782,446.6526 v 515.3684 z m -1272.50687,-996.379 791.01778,-446.6526 791.017787,446.6526 V 2385.861 L -822.78122,1939.2084 -1613.799,2385.861 Z" />
+      <path
+        class="logo-edge"
+        transform="matrix(0.69783509,0,0,0.69852944,-1212.1645,-4351.0636)"
+        d="m -1613.799,3004.3031 v -240.5053 l 756.62568,343.579 V 3038.661 L -1613.799,2695.082 v -206.1473 l 275.1367,-160.1366 v 263.2103 l 515.88108,240.5052 V 2385.861 l 412.70489,206.1474 v 584.0841 l -412.70489,189.5368 z m 1272.50687,103.0737 v -549.7263 l -481.48909,-240.5053 -344.75668,190.4254 0.836,-327.857 309.52858,-171.7894 807.447782,446.6526 v 515.3684 z m -1272.50687,-996.379 791.01778,-446.6526 791.017787,446.6526 V 2385.861 L -822.78122,1939.2084 -1613.799,2385.861 Z" />
+      <path
+        class="logo-scan"
+        transform="matrix(0.69783509,0,0,0.69852944,-1212.1645,-4351.0636)"
+        d="m -1613.799,3004.3031 v -240.5053 l 756.62568,343.579 V 3038.661 L -1613.799,2695.082 v -206.1473 l 275.1367,-160.1366 v 263.2103 l 515.88108,240.5052 V 2385.861 l 412.70489,206.1474 v 584.0841 l -412.70489,189.5368 z m 1272.50687,103.0737 v -549.7263 l -481.48909,-240.5053 -344.75668,190.4254 0.836,-327.857 309.52858,-171.7894 807.447782,446.6526 v 515.3684 z m -1272.50687,-996.379 791.01778,-446.6526 791.017787,446.6526 V 2385.861 L -822.78122,1939.2084 -1613.799,2385.861 Z" />
+    </g>
+  </g>
+</svg>
